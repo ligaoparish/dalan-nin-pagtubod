@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#7d1823"><meta name="description" content="Dalan nin Pagtubod — Catholic prayer companion of St. Stephen the Protomartyr Parish, Ligao City.">
+<link rel="manifest" href="manifest.json"><link rel="stylesheet" href="styles.css">
+<title>Dalan nin Pagtubod</title>
+</head>
+<body>
+<header class="top">
+  <div class="brandmark">✝</div>
+  <div class="brandcopy"><div class="eyebrow">ST. STEPHEN THE PROTOMARTYR PARISH</div><div class="location">LIGAO CITY, ALBAY</div></div>
+  <select id="language" aria-label="Language" class="lang"><option value="en">EN</option><option value="fil">FIL</option><option value="bik">BIK</option></select>
+</header>
+<main>
+<section id="home" class="screen active">
+  <div class="hero"><div class="hero-tag" data-i18n="tagline">PRAY • LEARN • LIVE THE FAITH</div><h1>Dalan nin<br><em>Pagtubod.</em></h1><p data-i18n="verse">“Be faithful even to the point of death, and I will give you the crown of life.”</p><small>Revelation 2:10</small></div>
+  <div class="welcome"><span class="gold">✦</span><div><strong data-i18n="welcome">Welcome, Parish Family</strong><p data-i18n="welcomeText">A little time in prayer can bring peace to the whole day.</p></div></div>
+  <h2 data-i18n="explore">Explore</h2>
+  <div class="tiles">
+    <button class="tile wine" data-go="prayers"><span>🙏</span><b data-i18n="allPrayers">All Prayers</b><small data-i18n="everyday">Everyday devotion</small></button>
+    <button class="tile goldtile" data-go="novenas"><span>📿</span><b data-i18n="novenas">Novenas</b><small data-i18n="prayDay">Pray day by day</small></button>
+    <button class="tile green" data-go="gospel"><span>📖</span><b data-i18n="dailyGospel">Daily Gospel</b><small data-i18n="readReflect">Read and reflect</small></button>
+    <button class="tile blue" data-go="mass"><span>✝</span><b data-i18n="mass">Order of the Mass</b><small data-i18n="followLiturgy">Follow the liturgy</small></button>
+    <button class="tile plum" data-go="parish"><span>⛪</span><b data-i18n="ourParish">Our Parish</b><small data-i18n="faithCommunity">Faith and community</small></button>
+    <button class="tile brown" data-go="announcements"><span>📅</span><b data-i18n="announcements">Announcements</b><small data-i18n="parishUpdates">Parish updates</small></button>
+    <button class="tile green" data-go="wellness"><span>🌿</span><b>Peace & Positivity</b><small>Offline wellness games</small></button>
+  </div>
+  <div class="notice" data-i18n="prototypeNotice">Starter app: parish schedules, approved translations, and daily readings must be verified before public release.</div>
+</section>
+<section id="prayers" class="screen">
+  <div class="pagehead"><button class="back" data-go="home">‹</button><div><h1 data-i18n="allPrayers">All Prayers</h1><p data-i18n="prayerSub">Traditional Catholic prayers</p></div></div>
+  <input id="prayerSearch" class="search" placeholder="Search prayers…" aria-label="Search prayers"><div id="prayerList" class="list"></div>
+</section>
+<section id="novenas" class="screen">
+  <div class="pagehead"><button class="back" data-go="home">‹</button><div><h1 data-i18n="novenas">Novenas</h1><p data-i18n="novenaSub">Devotions and daily prayer</p></div></div><div class="list" id="novenaList"></div>
+</section>
+<section id="gospel" class="screen">
+  <div class="pagehead"><button class="back" data-go="home">‹</button><div><h1 data-i18n="dailyGospel">Daily Gospel</h1><p data-i18n="gospelSub">Scripture and reflection</p></div></div>
+  <div class="reading-card"><div class="scripture-icon">📖</div><div class="eyebrow">A MOMENT WITH THE WORD</div><h2 data-i18n="readGospel">Read the Gospel of the Day</h2><p data-i18n="gospelNote">The readings change each day. Open a trusted Catholic lectionary source for the current reading.</p><a href="https://www.vaticannews.va/en/word-of-the-day.html" target="_blank" rel="noopener" data-i18n="openReading">Open Vatican News — Word of the Day ↗</a></div>
+  <div class="reflection"><h3 data-i18n="reflection">For your reflection</h3><p data-i18n="reflectionPrompt">What word or phrase stays with you today? How can you put the Gospel into action?</p><label for="reflectionNote" data-i18n="myReflection">My reflection</label><textarea id="reflectionNote" placeholder="Write a private reflection…"></textarea><button class="primary" id="saveReflection" data-i18n="saveReflection">Save reflection on this device</button><p id="reflectionStatus" class="small"></p></div>
+  <p class="notice" data-i18n="licenseNote">Daily readings and Bible translations may have copyright restrictions. Confirm permission before reproducing them in the app.</p>
+</section>
+<section id="mass" class="screen">
+  <div class="pagehead"><button class="back" data-go="home">‹</button><div><h1 data-i18n="mass">Order of the Mass</h1><p data-i18n="massSub">A guide to the Holy Eucharist</p></div></div>
+  <div class="mass-intro" data-i18n="massIntro">Follow the main parts of the Roman Catholic Mass. Use the parish-approved missal for complete current texts and responses.</div>
+  <div class="accordion">
+    <details open><summary data-i18n="introRites">1. Introductory Rites</summary><p>Entrance procession and hymn · Sign of the Cross · Greeting · Penitential Act · Kyrie · Gloria (when prescribed) · Collect</p></details>
+    <details><summary data-i18n="wordLiturgy">2. Liturgy of the Word</summary><p>First Reading · Responsorial Psalm · Second Reading (on Sundays and solemnities) · Gospel Acclamation · Gospel · Homily · Profession of Faith (when prescribed) · Universal Prayer</p></details>
+    <details><summary data-i18n="eucharistLiturgy">3. Liturgy of the Eucharist</summary><p>Preparation of the Gifts · Prayer over the Offerings · Eucharistic Prayer · Preface and Holy, Holy · Consecration · Mystery of Faith · Doxology and Great Amen</p></details>
+    <details><summary data-i18n="communionRite">4. Communion Rite</summary><p>The Lord’s Prayer · Sign of Peace · Lamb of God · Communion · Prayer after Communion</p></details>
+    <details><summary data-i18n="concludingRites">5. Concluding Rites</summary><p>Announcements (as appropriate) · Greeting and Blessing · Dismissal · Recessional hymn</p></details>
+  </div><p class="notice" data-i18n="massNotice">The exact texts and responses should follow the approved Roman Missal and local liturgical norms.</p>
+</section>
+<section id="parish" class="screen">
+  <div class="pagehead"><button class="back" data-go="home">‹</button><div><h1 data-i18n="ourParish">Our Parish</h1><p>St. Stephen the Protomartyr Parish</p></div></div>
+  <div class="reading-card"><div class="scripture-icon">⛪</div><h2>St. Stephen the Protomartyr Parish</h2><p>Ligao City, Albay, Philippines</p><p data-i18n="parishPlaceholder">This section can include the official parish history, clergy, ministries, contact details, and directions.</p></div>
+  <div class="reflection"><h3 data-i18n="parishInfo">Parish information</h3><p><b data-i18n="massSchedule">Mass schedule:</b> <span data-i18n="confirmSchedule">Please confirm with the parish office before publishing.</span></p><p><b data-i18n="contact">Contact:</b> <span data-i18n="addContact">Add the official parish phone number and social media links.</span></p><p><b data-i18n="address">Address:</b> <span data-i18n="addAddress">Add the parish-approved address and map location.</span></p></div>
+</section>
+<section id="announcements" class="screen">
+  <div class="pagehead"><button class="back" data-go="home">‹</button><div><h1 data-i18n="announcements">Announcements</h1><p data-i18n="newsSub">Parish news and activities</p></div></div>
+  <div class="reading-card"><div class="scripture-icon">📣</div><h2 data-i18n="stayConnected">Stay connected</h2><p data-i18n="announcementPlaceholder">Parish administrators can publish Mass schedules, feast-day celebrations, novenas, formation sessions, and community activities here.</p><p class="notice" data-i18n="noFeed">Live announcements require a connected database and admin account.</p></div>
+</section>
+<section id="wellness" class="screen">
+  <div class="pagehead"><button class="back" data-go="home">‹</button><div><h1>Peace & Positivity</h1><p>Small moments to care for your heart and mind</p></div></div>
+  <div class="wellness-intro"><span>🌱</span><div><b>You deserve a gentle moment.</b><p>Choose a short activity. There is no score to beat and no pressure to feel happy immediately.</p></div></div>
+  <div class="wellness-grid">
+    <button class="wellness-card" data-game="breathe"><span>🌬️</span><b>Calm Breathing</b><small>Pause and breathe gently for one minute</small></button>
+    <button class="wellness-card" data-game="gratitude"><span>🌼</span><b>Gratitude Garden</b><small>Plant three things you appreciate today</small></button>
+    <button class="wellness-card" data-game="kindness"><span>💛</span><b>Kindness Quest</b><small>Choose one small act of kindness</small></button>
+    <button class="wellness-card" data-game="memory"><span>🧠</span><b>Peaceful Pairs</b><small>A gentle memory-matching game</small></button>
+    <button class="wellness-card" data-game="mood"><span>☀️</span><b>Weather Within</b><small>Check in with how you feel</small></button>
+  </div>
+  <div id="wellnessPlay" class="wellness-play hidden" aria-live="polite"><div class="wellness-play-head"><h2 id="wellnessTitle">A gentle moment</h2><button id="wellnessClose" class="secondary">Close</button></div><div id="wellnessContent"></div></div>
+  <div class="notice"><b>A gentle reminder:</b> These activities support everyday reflection and relaxation; they are not medical treatment or a substitute for professional support. If you feel unsafe or overwhelmed, reach out to someone you trust or a qualified professional.</div>
+</section>
+<section id="admin" class="screen">
+  <div class="pagehead"><button class="back" data-go="home">‹</button><div><h1>Admin Control</h1><p>Manage prayers, library, theme, logo and app settings</p></div></div>
+  <div class="notice"><b>Local/offline admin mode.</b> Changes save on this device and remain available offline. Automatic cross-device sync needs the secure Supabase setup described in README.txt. Do not publish this admin screen as a secure staff portal until authentication and permissions are configured.</div>
+  <div class="admin-tabs"><button class="admin-tab selected" data-admin-tab="content">Content</button><button class="admin-tab" data-admin-tab="design">Theme & Logo</button><button class="admin-tab" data-admin-tab="sync">Sync Status</button></div>
+  <div id="admin-content" class="admin-pane">
+    <div class="admin-card"><h3>Prayer library</h3><p>Add, edit, or remove prayers. Edits are stored locally immediately.</p>
+      <label for="adminPrayerSelect">Choose prayer to edit</label><select id="adminPrayerSelect"></select>
+      <label for="adminPrayerTitleEn">Title (English)</label><input id="adminPrayerTitleEn" placeholder="Prayer title">
+      <label for="adminPrayerTitleFil">Title (Filipino)</label><input id="adminPrayerTitleFil" placeholder="Pamagat ng panalangin">
+      <label for="adminPrayerTitleBik">Title (Bikol)</label><input id="adminPrayerTitleBik" placeholder="Titulo kan pag-ampo">
+      <label for="adminPrayerTextEn">Prayer text (English)</label><textarea id="adminPrayerTextEn" rows="4"></textarea>
+      <label for="adminPrayerTextFil">Prayer text (Filipino)</label><textarea id="adminPrayerTextFil" rows="4"></textarea>
+      <label for="adminPrayerTextBik">Prayer text (Bikol)</label><textarea id="adminPrayerTextBik" rows="4"></textarea>
+      <div class="admin-actions"><button class="primary" id="adminSavePrayer">Save prayer</button><button class="secondary" id="adminNewPrayer">Add new</button><button class="danger" id="adminDeletePrayer">Delete</button></div>
+      <p class="small" id="adminPrayerStatus" aria-live="polite"></p>
+    </div>
+    <div class="admin-card"><h3>Library items</h3><p>Add a resource or category card for the parish library. This local catalog can be expanded for catechesis, documents, and approved devotion resources.</p>
+      <label for="libraryTitle">Resource title</label><input id="libraryTitle" placeholder="e.g. Guide to the Rosary">
+      <label for="libraryDesc">Description</label><textarea id="libraryDesc" rows="2" placeholder="Short description"></textarea>
+      <label for="libraryUrl">Optional trusted link</label><input id="libraryUrl" type="url" placeholder="https://…">
+      <button class="primary" id="addLibraryItem">Add library item</button><div id="libraryItemsAdmin" class="list"></div>
+    </div>
+    <div class="admin-card"><h3>Novena directory</h3><p>Manage the novena list shown in the app. Full approved nine-day prayer texts should be added before publication.</p>
+      <label for="novenaTitle">Novena title</label><input id="novenaTitle" placeholder="Novena title">
+      <label for="novenaDescription">Description</label><textarea id="novenaDescription" rows="2"></textarea>
+      <button class="primary" id="addNovena">Add novena</button><div id="novenaItemsAdmin" class="list"></div>
+    </div>
+  </div>
+  <div id="admin-design" class="admin-pane hidden">
+    <div class="admin-card"><h3>App appearance</h3><label for="themeColor">Primary theme color</label><input id="themeColor" type="color" value="#7d1823"><label for="themeAccent">Accent color</label><input id="themeAccent" type="color" value="#bc8a35"><label for="logoText">Logo text / initials</label><input id="logoText" maxlength="4" value="✝"><label for="logoUpload">Upload parish logo (PNG/JPG/SVG)</label><input id="logoUpload" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml"><div id="logoPreview" class="logo-preview">✝</div><button class="primary" id="saveDesign">Save appearance</button><button class="secondary" id="resetDesign">Reset theme</button><p class="small" id="designStatus" aria-live="polite"></p></div>
+  </div>
+  <div id="admin-sync" class="admin-pane hidden">
+    <div class="admin-card"><h3>Offline and sync</h3><p id="syncStatus">Checking sync status…</p><p>Content edits are saved on this device and queued locally. When online, the app can attempt to send queued updates to the configured backend.</p><label for="supabaseUrl">Supabase project URL</label><input id="supabaseUrl" type="url" placeholder="https://your-project.supabase.co"><label for="supabaseAnon">Supabase anon/public key</label><input id="supabaseAnon" type="password" placeholder="Public anon key only"><p class="small">These settings alone do not make admin access secure. A production setup must use Supabase Auth, server-side role checks, and Row Level Security. Never put a service-role key here.</p><button class="primary" id="saveSyncSettings">Save sync settings</button><button class="secondary" id="syncNow">Sync now</button><p class="small" id="syncMessage" aria-live="polite"></p></div>
+  </div>
+</section>
+<section id="detail" class="screen">
+  <div class="pagehead"><button class="back" data-go="prayers">‹</button><div><h1 id="detailTitle">Prayer</h1><p>Dalan nin Pagtubod</p></div></div>
+  <article class="prayer-text" id="detailText"></article><button class="primary" id="bookmarkBtn">☆ Save to favorites</button><p id="bookmarkStatus" class="small"></p>
+</section>
+<section id="favorites" class="screen">
+  <div class="pagehead"><button class="back" data-go="home">‹</button><div><h1 data-i18n="favorites">My Favorites</h1><p data-i18n="savedPrayers">Your saved prayers</p></div></div><div id="favoriteList" class="list"></div>
+</section>
+</main>
+<nav class="bottom-nav">
+<button class="navitem selected" data-go="home"><span>⌂</span><label data-i18n="home">Home</label></button>
+<button class="navitem" data-go="prayers"><span>☷</span><label data-i18n="prayersNav">Prayers</label></button>
+<button class="navitem" data-go="favorites"><span>☆</span><label data-i18n="saved">Saved</label></button>
+<button class="navitem" data-go="parish"><span>⛪</span><label data-i18n="parishNav">Parish</label></button>
+</nav>
+<script src="app.js"></script>
+</body></html>
