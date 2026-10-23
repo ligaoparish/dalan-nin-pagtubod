@@ -1,4 +1,4 @@
-const CACHE='dalan-pagtubod-v6';
+const CACHE='dalan-pagtubod-v7-daily-gospel';
 const FILES=['./','./index.html','./admin.html','./styles.css','./app.js','./manifest.json'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));
