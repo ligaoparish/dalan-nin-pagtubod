@@ -84,3 +84,6 @@ The app now includes five local-only activities: Calm Breathing, Gratitude Garde
 
 SEPARATE ADMIN LINK (v5)
 The Admin Control tile has been removed from the public user home menu. Admins can open the separate entry page at /admin.html; its Open Admin Control link opens index.html?admin=1. Example for GitHub Pages: https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/admin.html. This separation is navigation only, not access control: the prototype admin page is still not protected by authentication. Before public deployment, implement Supabase Auth and enforce admin/editor roles with database Row Level Security. Do not treat an unlisted URL or a hidden menu item as security.
+
+
+Language policy update (Version 6): The public user interface is English-only. The public Tagalog/Filipino and Bikol language selector has been removed. Administrators can enter an English prayer and its Bikol translation in the separate admin page. This prototype stores edits locally on the current device; secure sign-in and cross-device sync still require backend implementation.

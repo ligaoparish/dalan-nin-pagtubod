@@ -10,7 +10,7 @@
 <header class="top">
   <div class="brandmark">✝</div>
   <div class="brandcopy"><div class="eyebrow">ST. STEPHEN THE PROTOMARTYR PARISH</div><div class="location">LIGAO CITY, ALBAY</div></div>
-  <select id="language" aria-label="Language" class="lang"><option value="en">EN</option><option value="fil">FIL</option><option value="bik">BIK</option></select>
+  
 </header>
 <main>
 <section id="home" class="screen active">
@@ -79,14 +79,12 @@
   <div class="notice"><b>Local/offline admin mode.</b> Changes save on this device and remain available offline. Automatic cross-device sync needs the secure Supabase setup described in README.txt. Do not publish this admin screen as a secure staff portal until authentication and permissions are configured.</div>
   <div class="admin-tabs"><button class="admin-tab selected" data-admin-tab="content">Content</button><button class="admin-tab" data-admin-tab="design">Theme & Logo</button><button class="admin-tab" data-admin-tab="sync">Sync Status</button></div>
   <div id="admin-content" class="admin-pane">
-    <div class="admin-card"><h3>Prayer library</h3><p>Add, edit, or remove prayers. Edits are stored locally immediately.</p>
+    <div class="admin-card"><h3>Prayer library</h3><p>Add or edit the English prayer and prepare its Bikol translation. The user app displays English only; Bikol translations are entered by the administrator.</p>
       <label for="adminPrayerSelect">Choose prayer to edit</label><select id="adminPrayerSelect"></select>
       <label for="adminPrayerTitleEn">Title (English)</label><input id="adminPrayerTitleEn" placeholder="Prayer title">
-      <label for="adminPrayerTitleFil">Title (Filipino)</label><input id="adminPrayerTitleFil" placeholder="Pamagat ng panalangin">
-      <label for="adminPrayerTitleBik">Title (Bikol)</label><input id="adminPrayerTitleBik" placeholder="Titulo kan pag-ampo">
+      <label for="adminPrayerTitleBik">Bikol translation title (admin only)</label><input id="adminPrayerTitleBik" placeholder="Titulo kan pag-ampo">
       <label for="adminPrayerTextEn">Prayer text (English)</label><textarea id="adminPrayerTextEn" rows="4"></textarea>
-      <label for="adminPrayerTextFil">Prayer text (Filipino)</label><textarea id="adminPrayerTextFil" rows="4"></textarea>
-      <label for="adminPrayerTextBik">Prayer text (Bikol)</label><textarea id="adminPrayerTextBik" rows="4"></textarea>
+      <label for="adminPrayerTextBik">Bikol translation text (admin only)</label><textarea id="adminPrayerTextBik" rows="4"></textarea>
       <div class="admin-actions"><button class="primary" id="adminSavePrayer">Save prayer</button><button class="secondary" id="adminNewPrayer">Add new</button><button class="danger" id="adminDeletePrayer">Delete</button></div>
       <p class="small" id="adminPrayerStatus" aria-live="polite"></p>
     </div>
