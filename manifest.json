@@ -1,0 +1,10 @@
+{
+  "name": "Dalan nin Pagtubod",
+  "short_name": "Dalan",
+  "description": "Catholic prayer companion for St. Stephen the Protomartyr Parish, Ligao City, Albay.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fbf6ed",
+  "theme_color": "#7d1823",
+  "icons": []
+}
